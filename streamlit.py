@@ -1,15 +1,15 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import keras
-from keras.utils.np_utils import to_categorical
-from keras.models import Sequential, load_model
-from keras import backend as K
-import os
-import time
-import io
-from PIL import Image
-import plotly.express as px
+# import keras
+# from keras.utils.np_utils import to_categorical
+# from keras.models import Sequential, load_model
+# from keras import backend as K
+# import os
+# import time
+# import io
+# from PIL import Image
+# import plotly.express as px
 
 MODELSPATH = '/work/goodmultimodel.h5' #change
 DATAPATH = '/work/MonkeypoxMulticlass'  #change
@@ -55,7 +55,7 @@ def data_gen_(img):
 
 def load_models():
 
-    model = load_model('goodmultimodel.h5')
+    model = load_model(MODELSPATH)
     return model
 
 
